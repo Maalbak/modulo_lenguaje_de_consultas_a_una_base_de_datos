@@ -1,0 +1,28 @@
+CREATE DATABASE Proyecto;
+
+USE DATABASE Proyecto;
+
+CREATE TABLE Mesa(
+num_mesa NUMERIC (2) not null,
+cli_mesa NUMERIC (2) not null);
+
+CREATE TABLE Comanda(
+id_com NUMERIC (10) not null,
+fecha_com DATETIME not null);
+
+CREATE TABLE Garzon(
+id_gar NUMERIC (2) not null,
+nom_gar VARCHAR(20) not null,
+ap_gar VARCHAR (20) not null);
+
+CREATE TABLE Plato(
+id_pla NUMERIC (10) not null,
+nom_pla VARCHAR (50) not null,
+tipo_pla VARCHAR (20) not null,
+pre_pla NUMERIC (6) not null);
+
+CREATE TABLE Bebida(
+id_be NUMERIC (10) not null,
+nom_be VARCHAR (50) not null,
+tipo_pla VARCHAR (20) not null,
+pre_be NUMERIC (6) not null);
