@@ -1,0 +1,48 @@
+CREATE DATABASE Proyecto;
+
+USE Proyecto;
+
+CREATE TABLE Mesa(
+num_mesa NUMERIC (2) primary key,
+cli_mesa NUMERIC (2) not null);
+
+CREATE TABLE Garzon(
+id_gar NUMERIC (2) primary key,
+nom_gar VARCHAR(20) not null,
+ap_gar VARCHAR (20) not null);
+
+CREATE TABLE Plato(
+id_pla NUMERIC (10) primary key,
+nom_pla VARCHAR (50) not null,
+tipo_pla VARCHAR (20) not null,
+pre_pla NUMERIC (6) not null);
+
+CREATE TABLE Bebida(
+id_be NUMERIC (10) primary key,
+nom_be VARCHAR (50) not null,
+tipo_be VARCHAR (20) not null,
+pre_be NUMERIC (6) not null);
+
+CREATE TABLE Comanda(
+id_com NUMERIC (10) not null,
+fecha_com DATETIME not null,
+nummesa NUMERIC (2) not null,
+idgar NUMERIC (2) not null,
+idpla NUMERIC (10) not null,
+idbe NUMERIC (10) not null,
+
+CONSTRAINT fk_mesa
+    FOREIGN KEY (nummesa)
+    REFERENCES Mesa (num_mesa),
+
+CONSTRAINT fk_garzon
+    FOREIGN KEY (idgar)
+    REFERENCES Garzon (id_gar),
+
+CONSTRAINT fk_plato
+    FOREIGN KEY (idpla)
+    REFERENCES Plato (id_pla),
+
+CONSTRAINT fk_bebida
+    FOREIGN KEY (idbe)
+    REFERENCES Bebida (id_be));

@@ -1,0 +1,53 @@
+INSERT INTO Mesa
+
+(num_mesa,cli_mesa)
+
+VALUES('1','2'),
+('2','4'),
+('3','4'),
+('4','2'),
+('5','2'),
+('6','4'),
+('7','6'),
+('8','2'),
+('9','4'),
+('10','4')
+
+INSERT INTO Garzon
+
+(id_gar,nom_gar,ap_gar)
+
+VALUES ('01','Barbara','Contreras'),
+('02','Miguel','León'),
+('03','Camilo','Delgado'),
+('04','Victoria','Alegría')
+
+INSERT INTO Plato
+
+(id_pla,nom_pla,tipo_pla,pre_pla)
+
+VALUES ('101','Carne al jugo con acompañamiento','Fondo','4000'),
+('102','Lomo a lo pobre','Fondo','5500'),
+('103','Lasaña','Fondo','4500'),
+('104','Completo','Sandwich','2000'),
+('105','Churrasco','Sandwich','4500'),
+('106','Ensalada Cesar','Ensalada','5000'),
+('107','Ensalada a la chilena','Ensalada','3500'),
+('108','Chorrillana','Para compartir','10000'),
+('109','Tiramisú','Postre','3000'),
+('110','Flan','Postre','2000')
+
+INSERT INTO Bebida
+
+(id_be,nom_be,tipo_be,pre_be)
+
+VALUES ('201','Coca cola','Gaseosa','1500'),
+('202','Sprite','Gaseosa','1500'),
+('203','Jugo frutilla','Jugo','2000'),
+('204','Limonada','Jugo','2000'),
+('205','Agua mineral','Agua','1500'),
+('206','Pisco Sour','Alcohol','4000'),
+('207','Cerveza','Alcohol','3000'),
+('208','Vino','Alcohol','3500'),
+('209','Te','Caliente','1500'),
+('210','Café','Caliente','1500')

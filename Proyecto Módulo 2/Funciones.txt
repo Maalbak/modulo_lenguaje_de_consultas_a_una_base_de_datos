@@ -1,0 +1,32 @@
+SELECT * FROM Mesa
+SELECT * FROM Garzon
+SELECT * FROM Plato
+SELECT * FROM Bebida
+
+SELECT nom_pla FROM Plato
+
+ALTER TABLE Bebida
+ADD Precio_neto as (Pre_be*0.81)
+
+UPDATE Bebida set pre_be = '2000'
+where id_be = 209
+
+DELETE FROM Plato
+where nom_pla = 'Lasaña' 
+
+SELECT * FROM Plato
+
+INSERT INTO Comanda
+
+(id_com,fecha_com,nummesa,idgar,idpla,idbe)
+
+VALUES ('001','20/05/2020','1','02','101','206')
+
+SELECT * 
+FROM Comanda C JOIN Bebida B 
+ON C.idbe = B.id_be
+
+ALTER TABLE Comanda
+DROP CONSTRAINT fk_garzon
+
+DROP TABLE Garzon
